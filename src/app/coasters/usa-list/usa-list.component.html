@@ -1,0 +1,7 @@
+<h1>USA Coasters</h1>
+
+<ul>
+    <li *ngFor="let coaster of coasters$ | async">
+        <a href="{{coaster.url}}">{{coaster.name}}</a>
+    </li>
+</ul>

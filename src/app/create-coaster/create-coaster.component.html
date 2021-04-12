@@ -1,0 +1,26 @@
+<h2>Create A Coaster</h2>
+
+<div class="form-group">
+  <form [formGroup]="coasterForm" (ngSubmit)="onSubmit()">
+    <div class="coaster-name">
+      <input type="text"
+             placeholder="Coaster Name"
+             name="coasterName"
+             formControlName="name">
+    </div>
+    <div class="coaster-location">
+        <input type="text"
+               placeholder="Coaster Location"
+               formControlName="location">
+    </div>
+    <div class="coaster-url">
+        <input type="text"
+               placeholder="Coaster URL"
+               formControlName="url">
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<p>Form Control value: {{ coasterForm.value | json }}</p>
+<p>Form Control status: {{ coasterForm.status | json }}</p>
